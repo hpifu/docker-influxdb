@@ -14,7 +14,8 @@ services:
       - "/var/docker/influxdb/data:/var/lib/influxdb"
       - "/var/docker/influxdb/conf/influxdb.conf:/etc/influxdb/influxdb.conf"
     networks:
-      - influxdbnet
+      - online
 networks:
-  influxdbnet:
-    name: influxdbnet
+  online:
+    external: true
+    name: online
